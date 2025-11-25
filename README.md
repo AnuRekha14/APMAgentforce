@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 40px;
             text-align: center;
+            background: #f9f9f9;
         }
         h1 {
             color: #2c3e50;
@@ -19,15 +20,17 @@
             margin: 40px auto;
             border: 1px solid #ccc;
             border-radius: 8px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
 
 <h1>Agentforce Messaging</h1>
-<p>The chat widget below is embedded and the hidden User_Id is automatically set.</p>
+<p>The chat widget is embedded below. The hidden pre-chat email is automatically set.</p>
 
-<!-- Optional container for in-page chat -->
+<!-- Container for in-page chat -->
 <div id="embeddedMessagingContainer"></div>
 
 <script type="text/javascript">
@@ -45,7 +48,7 @@
                 }
             );
         } catch (err) {
-            console.error('Error loading Embedded Messaging:... ', err);
+            console.error('Error loading Embedded Messaging: ', err);
         }
     }
 
@@ -53,12 +56,12 @@
     window.addEventListener("onEmbeddedMessagingReady", () => {
         console.log('Embedded Messaging is ready');
 
-        const userId = 'contactreply@mailinator.com';
-        console.log('Setting hidden pre-chat field User_Id:', userId);
+        const prechatEmail = 'contactreply@mailinator.com';
+        console.log('Setting hidden pre-chat field HiddenPrechatEmail:', prechatEmail);
 
         if (embeddedservice_bootstrap && embeddedservice_bootstrap.prechatAPI) {
             embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-                'HiddenPrechatEmail': userId
+                'HiddenPrechatEmail': prechatEmail
             });
         } else {
             console.warn('prechatAPI not available yet');
