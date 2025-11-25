@@ -45,7 +45,7 @@
                 }
             );
         } catch (err) {
-            console.error('Error loading Embedded Messaging: ', err);
+            console.error('Error loading Embedded Messaging:... ', err);
         }
     }
 
