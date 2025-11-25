@@ -36,7 +36,7 @@
             console.log('Inside Messaging Ready Block');
 
             // Set hidden pre-chat field User_Id to your provided value
-            const userId = '005gK000009kHK1';
+            const userId = '005gK000009kHK1QAM';
             console.log('User Id:', userId);
 
             if (embeddedservice_bootstrap && embeddedservice_bootstrap.prechatAPI) {
