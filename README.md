@@ -36,12 +36,12 @@
             console.log('Inside Messaging Ready Block');
 
             // Set hidden pre-chat field User_Id to your provided value
-            const userId = '005gK000009kHK1QAM';
+            const userId = 'contactreply@mailinator.com';
             console.log('User Id:', userId);
 
             if (embeddedservice_bootstrap && embeddedservice_bootstrap.prechatAPI) {
                 embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-                    'User_Id': userId
+                    'HiddenPrechatEmail': userId
                 });
             } else {
                 console.warn('prechatAPI not available yet');
